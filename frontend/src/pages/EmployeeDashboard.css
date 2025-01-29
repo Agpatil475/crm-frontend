@@ -1,0 +1,312 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f4f8;
+}
+
+.dashboard-container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #6a4c93;
+  padding: 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px; /* Adds spacing between elements */
+}
+
+.sidebar h2 {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.employee-name {
+  font-size: 18px;
+  font-weight: normal;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.sidebar .sidebar-menu {
+  width: 100%;
+}
+
+.sidebar .sidebar-menu button {
+  background-color: #6a4c93;
+  border: none;
+  color: white;
+  padding: 15px;
+  font-size: 18px;
+  width: 100%;
+  margin-bottom: 15px;
+  cursor: pointer;
+  border-radius: 10px; /* Slightly round buttons */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.sidebar .sidebar-menu button:hover {
+  background-color: #543b74;
+  transform: translateY(-2px); /* Adds a slight hover effect */
+}
+
+.sidebar .sidebar-menu button:active {
+  background-color: #3c2a55; /* Darker shade when clicked */
+}
+
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Ensures equal spacing */
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.start-btn {
+  background-color: #6a4c93;
+  color: white;
+  padding: 15px 25px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.start-btn:hover {
+  background-color: #543b74;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background-color: #8e44ad;
+  color: white;
+  padding: 30px;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card.pink {
+  background-color: #e74c3c;
+}
+
+.card.purple {
+  background-color: #8e44ad;
+}
+
+.card.red {
+  background-color: #e74c3c;
+}
+
+.card.green {
+  background-color: #27ae60;
+}
+
+.page-content {
+  padding: 20px;
+}
+
+.form-container {
+  margin-top: 30px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-field {
+  margin-bottom: 15px;
+}
+
+.form-field label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-field input,
+.form-field select {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-field button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #6a4c93;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.form-field button:hover {
+  background-color: #543b74;
+}
+
+/* Popup Modal Styles */
+.popup-form {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 100%;
+  position: relative;
+}
+
+.popup-content h3 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #aaa;
+}
+
+.close-btn:hover {
+  color: #000;
+}
+
+/* Call Details Button Positioned at the Top Right */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.call-details-btn {
+  position: absolute;
+  top: 10px;
+  right: 100px;
+  padding: 10px 20px;
+  background-color: #6a4c93;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.call-details-btn:hover {
+  background-color: #543b74;
+}
+
+/* Popup Modal Styles */
+.popup-form {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 100%;
+  position: relative;
+}
+
+.popup-content h3 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #aaa;
+}
+
+.close-btn:hover {
+  color: #000;
+}
+
+/* Add this CSS for the logout button */
+.logout-btn {
+  background-color: #e74c3c;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.logout-btn:hover {
+  background-color: #c0392b;
+}
